@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect</title>
+
+  <script src="data.js"></script>
+</head>
+<body>
+
+<h3>Weiterleitung...</h3>
+
+<script>
+try {
+    const params = new URLSearchParams(window.location.search);
+    let key = params.get("key");
+
+    // ❗ Safety: falls + oder kaputte Zeichen drin sind
+    if (key) {
+        key = key.replace("+", "").trim();
+    }
+
+    // ❌ kein key → error
+    if (!key) {
+        window.location.href = "error.html";
+    }
+
+    // ❌ DB existiert nicht oder key fehlt
+    if (typeof KEY_DB === "undefined") {
+        window.location.href = "error.html";
+    }
+
+    const entry = KEY_DB[key];
+
+    // ❌ nicht gefunden → error
+    if (!entry || !entry.url) {
+        window.location.href = "error.html";
+    } else {
+        window.location.href = entry.url;
+    }
+
+} catch (e) {
+    // ❌ alles andere → error
+    window.location.href = "error.html";
+}
+</script>
+
+</body>
+</html>
