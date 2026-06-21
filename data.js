@@ -1,5 +1,5 @@
 const KEY_DB = {
-  "dateiserver": {
+  "dateiserve": {
     name: "DateiServer",
     url: "https://acerfex.github.io/dateiserver"
   },
