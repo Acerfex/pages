@@ -1,7 +1,7 @@
 const KEY_DB = {
-  "seite1": {
-    name: "Test1",
-    url: "https://google.com"
+  "dateiserver": {
+    name: "DateiServer",
+    url: "https://acerfex.github.io/dateiserver"
   },
   "seite2": {
     name: "Test2",
