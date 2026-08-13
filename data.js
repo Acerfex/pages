@@ -1,10 +1,10 @@
 const KEY_DB = {
-  "seite1": {
-    name: "Test1",
+  "google": {
+    name: "Google",
     url: "https://google.com"
   },
-  "seite2": {
-    name: "Test2",
-    url: "https://google.com"
+  "acerfex_app": {
+    name: "Acerfex App",
+    url: "www.example.com"
   }
 };
